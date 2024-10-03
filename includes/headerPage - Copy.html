@@ -1,0 +1,226 @@
+<header class="header">
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container">
+      <a class="navbar-brand" href="index.html"><img src="images/logof.png" class="img-fluid" width="100px"></a>
+      <!-- <a class="navbar-brand" href="index.html"><img src="images/header-logo-1.png" class="img-fluid"></a> -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#">
+              TRADING
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="whatisforex.html">What is Forex?</a>
+              <a class="dropdown-item" href="what-are-vanilla-options.html">Vanillia Options</a>
+              <a class="dropdown-item" href="what-are-cfds.html">What are CFDs</a>
+              <a class="dropdown-item" href="etf.html">ETF Trading</a>
+              <a class="dropdown-item" href="stock-trading.html">Stock Trading</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown ">
+            <a class="nav-link dropdown-toggle" href="#">
+              TRADING INFO
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="forex.html">Forex</a>
+              <a class="dropdown-item" href="indices.html">Indices</a>
+              <a class="dropdown-item" href="cfds.html">CFDs</a>
+              <a class="dropdown-item" href="metals.html">Metals</a>
+              <a class="dropdown-item" href="energies.html">Energies</a>
+              <a class="dropdown-item" href="cryptocurrencies.html">Cryptocurrencies</a>
+              <a class="dropdown-item" href="futures.html">Futures</a>
+
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#">
+              PARTNERSHIP
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="platforms-desktop.html">Advantages</a>
+              <a class="dropdown-item" href="platforms-web-trading.html">Partner Types</a>
+              <a class="dropdown-item" href="platforms-mobile-apps.html">Partner Promotions</a>
+              <a class="dropdown-item" href="#">Commission Structure</a>
+            </div>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="platform.html">
+              PLATFORMS
+            </a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="about.html">
+              ABOUT
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">
+              CONTACT
+            </a>
+          </li>
+          <!-- <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#">
+              Learn
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="learn-home.html">Learn Home</a>
+              <a class="dropdown-item" href="learn-using-trade-station.html">Using Stocks 4 You</a>
+              <a class="dropdown-item" href="learn-new-to-trading.html">New to Trading</a>
+              <a class="dropdown-item" href="learn-faq.html">FAQs</a>
+              <a class="dropdown-item" href="learn-events.html">Events</a>
+              <a class="dropdown-item" href="learn-getting-started.html">Getting Started</a>
+              <a class="dropdown-item" href="learn-support-forum.html">Support Forum</a>
+              <a class="dropdown-item" href="learn-master-class.html">Master Class</a>
+              <a class="dropdown-item" href="learn-retirement-planning.html">Retirement Planning</a>
+              LearnPricing<a class="dropdown-item" href="#">Overview</a>
+            </div>
+          </li> -->
+          <li  class="nav-item">
+            <a class="nav-link login ml-md-5" href="https://office.Unixcapitals.com/" target="_blank">Login </a>
+          </li>
+          <!-- <li class="nav-item ">
+            <a class="nav-link signup" href="https://crm.stocks4you.in/#/signup" target="_blank">Signup </a>
+          </li> -->
+
+          <!-- <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#">
+          Research
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+        	
+          <a class="dropdown-item" href="research-insights.html">Insights</a>
+          <a class="dropdown-item" href="research-discover.html">Discover</a>
+        </div>
+      </li> -->
+
+
+
+
+
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<script>
+  // Header Fixed Css
+  $(function () {
+    $(window).on("scroll", function () {
+      if ($(window).scrollTop() > 50) {
+        $(".header").addClass("header-fixed");
+      } else {
+        //remove the background property so it comes transparent again (defined in your css)
+        $(".header").removeClass("header-fixed");
+      }
+    });
+  });
+
+  $(function () {
+
+    var siteSticky = function () {
+      $(".js-sticky-header").sticky({ topSpacing: 0 });
+    };
+    siteSticky();
+
+    var siteMenuClone = function () {
+
+      $('.js-clone-nav').each(function () {
+        var $this = $(this);
+        $this.clone().attr('class', 'site-nav-wrap').appendTo('.site-mobile-menu-body');
+      });
+
+
+      setTimeout(function () {
+
+        var counter = 0;
+        $('.site-mobile-menu .has-children').each(function () {
+          var $this = $(this);
+
+          $this.prepend('<span class="arrow-collapse collapsed">');
+
+          $this.find('.arrow-collapse').attr({
+            'data-toggle': 'collapse',
+            'data-target': '#collapseItem' + counter,
+          });
+
+          $this.find('> ul').attr({
+            'class': 'collapse',
+            'id': 'collapseItem' + counter,
+          });
+
+          counter++;
+
+        });
+
+      }, 1000);
+
+      $('body').on('click', '.arrow-collapse', function (e) {
+        var $this = $(this);
+        if ($this.closest('li').find('.collapse').hasClass('show')) {
+          $this.removeClass('active');
+        } else {
+          $this.addClass('active');
+        }
+        e.preventDefault();
+
+      });
+
+      $(window).resize(function () {
+        var $this = $(this),
+          w = $this.width();
+
+        if (w > 768) {
+          if ($('body').hasClass('offcanvas-menu')) {
+            $('body').removeClass('offcanvas-menu');
+          }
+        }
+      })
+
+      $('body').on('click', '.js-menu-toggle', function (e) {
+        var $this = $(this);
+        e.preventDefault();
+
+        if ($('body').hasClass('offcanvas-menu')) {
+          $('body').removeClass('offcanvas-menu');
+          $this.removeClass('active');
+        } else {
+          $('body').addClass('offcanvas-menu');
+          $this.addClass('active');
+        }
+      })
+
+      // click outisde offcanvas
+      $(document).mouseup(function (e) {
+        var container = $(".site-mobile-menu");
+        if (!container.is(e.target) && container.has(e.target).length === 0) {
+          if ($('body').hasClass('offcanvas-menu')) {
+            $('body').removeClass('offcanvas-menu');
+          }
+        }
+      });
+    };
+    siteMenuClone();
+
+  });
+  $('.dropdown-toggle').click(function (e) {
+    if ($(document).width() > 768) {
+      e.preventDefault();
+
+      var url = $(this).attr('href');
+
+
+      if (url !== '#') {
+
+        window.location.href = url;
+      }
+
+    }
+  });
+
+</script>
