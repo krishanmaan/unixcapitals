@@ -6,13 +6,16 @@
     font-family: sans-serif;
     letter-spacing: 1px;
     font-weight: 300;
+    
 }
 
 body {
     overflow-x: hidden;
+    
 }
 
 nav {
+  
     height: 6rem;
     width: 100vw;
     background-color: #131418;

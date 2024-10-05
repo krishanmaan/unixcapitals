@@ -2973,3 +2973,8 @@ a.btng1:hover {
     font-size: 11px !important;
   }
 }
+
+
+#slides {
+  padding-top: 6vh;
+}
