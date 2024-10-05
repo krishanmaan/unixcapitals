@@ -3,6 +3,7 @@
 
 $(function(){
   $("#deskHeader").load("includes/headerPage.html"); 
+  $("#slides").load("includes/slider.html"); 
   $("#mFooter").load("includes/footerPage.html"); 
   $("#zeroint").load("includes/zeroPage.html"); 
 });
